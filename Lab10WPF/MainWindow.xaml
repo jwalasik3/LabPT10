@@ -1,0 +1,27 @@
+﻿<Window x:Class="lab10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" CanUserAddRows="True" CanUserDeleteRows="True" CanUserSortColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,50,10,10"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
+            <ComboBox x:Name="propertyComboBox" Width="150" Margin="0,0,5,0"/>
+            <TextBox x:Name="valueTextBox" Width="150" Margin="0,0,5,0"/>
+            <Button Content="Search" Width="75" Click="OnToolBarSearchClick"/>
+            <Button Content="Sort" Width="75" Click="OnToolBarSortClick"/>
+        </StackPanel>
+
+        <Button Content="Reset Filter" Click="OnResetFilterClick" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="169"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Add" Width="75" Click="OnAddClick" Margin="0,0,5,0"/>
+            <Button Content="Delete" Width="75" Click="OnDeleteClick" Margin="0,0,5,0"/>
+            <Button Content="Edit" Width="75" Click="OnEditClick" Margin="0,0,5,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
